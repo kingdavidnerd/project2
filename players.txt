@@ -1,0 +1,11 @@
+KingDavid,H,100,34,GunSprayDown
+Michael,A,550,90.0,DivineSmite
+Gabriel,A,500,85.5,SonicBlast
+Mammon,D,470,78.9,GreedCurse
+Samuel,H,110,52.5,BlessedArrow
+Beelzebub,D,575,93.7,PlagueStrike
+Lucifer,D,600,95.2,Hellfire
+Azazel,D,450,82.3,DarkSlash
+Enoch,H,95,50.2,FaithStrike
+Metatron,A,530,87.6,Lightwave
+Raphael,A,480,80.4,HealingAura
