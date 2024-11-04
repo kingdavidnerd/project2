@@ -1,4 +1,4 @@
-# Game Inventory Management System
+# Player Management System
 
 **Course**: ICSI201/IECE201  
 **Semester**: Fall 2024  
