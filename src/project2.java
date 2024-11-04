@@ -1,10 +1,28 @@
+/*
+ * Course: ISCI201/IECE201
+ * Semester: Fall 2024
+ * Lab Time: Wednesday
+ * Student Name: David Omotosho
+ * Student ID: Do374676
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * The project2 class represents a program that manages a collection of Player
+ * objects, allowing the user to view, sort, search, and calculate data on these
+ * characters through a menu-driven interface.
+ */
 public class project2 {
 
+    /**
+     * Main method that initiates the program and handles the user menu.
+     *
+     * @param args command-line arguments (not used)
+     */
     public static void main(String[] args) {
         Player[] players = new Player[100];
         int playerCount = loadPlayersFromFile("players.txt", players);
@@ -62,6 +80,13 @@ public class project2 {
         scanner.close();
     }
 
+    /**
+     * Loads player data from a file and initializes Player objects.
+     *
+     * @param filename the name of the file containing player data
+     * @param players an array to store the loaded players
+     * @return the number of players loaded
+     */
     // Method to load players from file
     public static int loadPlayersFromFile(String filename, Player[] players) {
         int playerCount = 0;
@@ -96,6 +121,12 @@ public class project2 {
         return playerCount;
     }
 
+    /**
+     * Displays players sorted by name.
+     *
+     * @param players an array of players
+     * @param count the number of players
+     */
     public static void showPlayersSortedByName(Player[] players, int count) {
         // Create a copy of the array to avoid modifying the original
         Player[] sortedPlayers = new Player[count];
@@ -119,6 +150,13 @@ public class project2 {
         }
     }
 
+    /**
+     * Finds players with a specified attack ability.
+     *
+     * @param players an array of players
+     * @param count the number of players
+     * @param attackAbility the attack ability to search for
+     */
     public static void findPlayersByAttackAbility(Player[] players, int count, String attackAbility) {
         System.out.println("Players with attack ability \"" + attackAbility + "\":");
         for (int i = 0; i < count; i++) {
@@ -128,6 +166,12 @@ public class project2 {
         }
     }
     
+    /**
+     * Displays players sorted by power.
+     *
+     * @param players an array of players
+     * @param count the number of players
+     */
     public static void showPlayersSortedByPower(Player[] players, int count) {
         // Create a copy of the array to avoid modifying the original
         Player[] sortedPlayers = new Player[count];
@@ -151,6 +195,13 @@ public class project2 {
         }
     }
 
+    /**
+     * Calculates and displays the total power of all players.
+     *
+     * @param players an array of players
+     * @param count the number of players
+     * @return the total power of all players
+     */
     public static double calculateTotalPower(Player[] players, int count) {
         double totalPower = 0.0;
         for (int i = 0; i < count; i++) {
@@ -160,6 +211,11 @@ public class project2 {
         return totalPower;
     }
     
+    /**
+     * Exits the program by updating the running condition to false.
+     *
+     * @return false to signal the program to stop running
+     */
     // Quit method
     public static boolean quitProgram() {
         System.out.println("Exiting program.");
